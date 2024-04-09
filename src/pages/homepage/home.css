@@ -1,0 +1,215 @@
+.home{
+    padding: 5px 5px;
+    /* background-color: red; */
+    margin-top: -10px;
+}
+.yinyang{
+    vertical-align: middle;
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+.center-column{
+   flex: 0.4;
+   margin-top: 30px;
+}
+.side-column{
+    flex: 0.3;
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+}
+
+#todoInput{
+    border: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-top: 10px;
+    width: 85%;
+    height: 30px;
+}
+#todoInput:focus{
+    outline: none;
+}
+#todoInput::placeholder{
+    color: black;
+}
+
+.gamesButton{
+    font-size: 30px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgb(52, 51, 51);
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    height: 40px;
+}
+
+.gamesButton:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+
+#chat_dialog{
+    height: 500px;
+    width: 500px;
+}
+
+#quotes{
+    max-height: 180px;
+    width: 300px; 
+    border-radius: 10px;
+    padding: 10px 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 2px 2px 2px rgb(52, 51, 51),;
+    font-size: 25;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#quotes>div{
+    font-size: 22px;
+}
+#quotes::-webkit-scrollbar{
+    width: 5px;
+}
+
+#startGame:hover{
+    cursor: pointer;
+}
+
+
+#messageBody::-webkit-scrollbar{
+    width: 8px;
+}
+#messageBody::-webkit-scrollbar-track{
+    background-color: transparent;
+    width: 8px;
+}
+#messageBody::-webkit-scrollbar-thumb{
+    background-color: #858383;
+    width: 10px;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+#addTodo{
+    border: none;
+    background-color: transparent;
+}
+#addTodo:hover{
+    cursor: pointer;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: start;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+
+.footer{
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    margin-top: -50px;
+}
+
+
+@media screen and (max-width:1280px){
+    .gamesButton{
+        max-width: 200px;
+    }
+    #quotes{
+        max-width: 280px;
+    }
+}
+@media screen and (max-width:1140px){
+    #quotes{
+        max-width: 260px;
+    }
+    #quotes>div{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .gamesButton{
+        max-width: 140px;
+        font-size: 22px;
+        height: 24px;
+        margin-bottom: 5px;
+    }
+    .gamesButton>img{
+        display: none;
+    }
+    #quotes{
+        max-width: 160px;
+        font-size: 12px;
+    }
+    #quotes>div{
+        font-size: 18px;
+    }
+}
+
+/* @media screen and (max-width:840px){
+    .body{
+        background-color: red;
+    }
+    .gamesButton{
+        max-width: 50px;
+    }
+} */
+@media screen and (max-width:768px){
+    .gamesButton{
+        max-width: 120px;
+    }
+    .footer{
+      margin-top: 0px;
+    }
+}
+
+@media screen and (max-width:640px){
+    .body{
+        align-items: center;
+     }
+    .body{
+        display: flex;
+        flex-direction: column;
+    }
+    #subhead{
+        display: none;
+    }
+    .footer{
+        position: relative;
+        right: -80px;
+        padding: 10px;
+    }
+    #chat_dialog{
+       width: 350px;
+    }
+    /* #trivia_container{
+        display: none;
+    } */
+}

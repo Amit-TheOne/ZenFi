@@ -1,0 +1,55 @@
+.ambientSounds{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 250px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ambientButton{
+    margin: 10 10px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#soundPlayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+@media screen and (max-width:1280px){
+    .ambientSounds{
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:1140px){
+    .ambientSounds{
+        max-width: 200px;
+    }
+}
+@media screen and (max-width:1024px){
+    .ambientSounds{
+        max-width: 180px;
+        margin-top: 10px;
+    }
+    .ambientButton{
+        margin: 5 5px;
+        padding: 0 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width:768px){
+    .ambientSounds{
+        max-width: 160px;
+    }
+}
