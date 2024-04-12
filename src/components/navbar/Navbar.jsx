@@ -13,7 +13,7 @@ import { newShade } from "../../utils/newShade";
 import { toastify } from "../../utils/toastify";
 
 const Navbar = () => {
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user.user);
   const theme = useSelector((state) => state.theme.theme.color);
   const textColor = useSelector((state) => state.theme.theme.text);
   const dispatch = useDispatch();

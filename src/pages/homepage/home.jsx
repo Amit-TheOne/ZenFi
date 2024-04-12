@@ -20,6 +20,7 @@ import animationData from "../../assets/animations/loadAnimation.json";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/reducers/userSlice";
 import Themes from "../../components/Themes/Themes";
+import Timer from "../../components/Timer/Timer"
 
 const iconStyle = {
   height: "30px",
@@ -93,14 +94,15 @@ export default function Home() {
             </div>
             <div className="side-column">
               {/* <Timer /> */}
+              <Timer />
 
-              <div
+              {/* <div
                 className="gamesButton"
                 style={{ backgroundColor: newShade(theme, 5) }}
                 onClick={onOpen}
               >
                 <img src={chatBot} style={iconStyle} /> ZenFiBot
-              </div>
+              </div> */}
               <Dialog open={chatDialogOpen} maxWidth="sm">
                 <div
                   id="chat_dialog"
@@ -110,7 +112,7 @@ export default function Home() {
                 </div>
               </Dialog>
 
-              <div
+              {/* <div
                 className="gamesButton"
                 id="trivia_container"
                 style={{ backgroundColor: newShade(theme, 5) }}
@@ -120,7 +122,7 @@ export default function Home() {
                 }}
               >
                 💡Trivia
-              </div>
+              </div> */}
               <SoundPlayers />
               <Quote />
             </div>

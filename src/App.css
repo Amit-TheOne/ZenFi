@@ -1,13 +1,19 @@
 .app{
+  margin: 0;
   padding: 0px 0px;
+  box-sizing: border-box;
+  cursor: url('./cursor.svg'),auto;
+  /* background-image: linear-gradient(135deg,rgba(209, 34, 34, 0),rgba(181, 29, 29, 0.8)); */
+  /* background-image: url(/src/components/MediaPlayer/gifs/leaf-cafe.gif); */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.image {
   min-height: 100vh;
   overflow: hidden;
-  cursor: url('./cursor.svg'),auto;
-  /* background-image: linear-gradient(135deg,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8)); */
-  /* background-image: url(./components/MediaPlayer/gifs/small/rain.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
-

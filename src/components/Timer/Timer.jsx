@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import PauseIcon from "@mui/icons-material/Pause";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import TimerIcon from "@mui/icons-material/Timer";
 import "./Timer.css";
-import { newShade } from "../../App";
-import { themeContext } from "../../homepage/home";
+// import { newShade } from "../../App";
+// import { themeContext } from "../../homepage/home";
 
 export default function Timer() {
   const [time, setTime] = useState(0);
@@ -24,10 +24,11 @@ export default function Timer() {
     return () => clearInterval(interval);
   }, [timerOn]);
 
-  const contextData = useContext(themeContext);
-  const theme = contextData.themes;
+  // const contextData = useContext(themeContext);
+  // const theme = contextData.themes;
   return (
-    <div className="timer" style={{ backgroundColor: newShade(theme, -30) }}>
+    // <div className="timer" style={{ backgroundColor: newShade(theme, -30) }}>
+    <div className="timer">
       <span >
         <TimerIcon style={{verticalAlign:"middle"}} /> Stop Watch
       </span>
