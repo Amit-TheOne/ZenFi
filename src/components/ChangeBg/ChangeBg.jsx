@@ -21,7 +21,7 @@ export default function Themes() {
     // const id = Math.floor(Math.random() * 7) + 1;
 
     const changeTheme = () => {
-        const id = Math.floor(Math.random() * 7) + 1;
+        const id = Math.floor(Math.random() * 12) + 1;
         dispatch(changeThemeById(id));
         dispatch(saveTheme(id));
 

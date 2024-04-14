@@ -119,7 +119,7 @@ export default function Home() {
                 💡Trivia
               </div> */}
               <SoundPlayers />
-              <Quote />
+              {/* <Quote /> */}
             </div>
           </div>
         </div>
