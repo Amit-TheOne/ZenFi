@@ -1,40 +1,28 @@
-import rain from "../components/MediaPlayer/gifs/small/rain.jpg"
-import rainGif from "../components/MediaPlayer/gifs/rain.gif"
-import cat from "../components/MediaPlayer/gifs/small/cat.jpg"
-import catGif from "../components/MediaPlayer/gifs/cat.gif"
-import fish from "../components/MediaPlayer/gifs/small/fish.jpg"
-import fishGif from "../components/MediaPlayer/gifs/fish.gif"
-import vending from "../components/MediaPlayer/gifs/small/vending.jpg"
-import vendingGif from "../components/MediaPlayer/gifs/vending.gif"
-import cafe from "../components/MediaPlayer/gifs/small/leaf-cafe.jpg"
-import cafeGif from "../components/MediaPlayer/gifs/leaf-cafe.gif"
-import clouds from "../components/MediaPlayer/gifs/small/clouds.jpg"
-import cloudsGif from "../components/MediaPlayer/gifs/clouds.gif"
-import monke from "../components/MediaPlayer/gifs/small/monke.jpg"
-import monkeGif from "../components/MediaPlayer/gifs/monke.gif"
-import room from "../components/MediaPlayer/gifs/small/room.jpg"
-import roomGif from "../components/MediaPlayer/gifs/room.gif"
+import tokyoStreet from "../assets/bgImages/tokyo-street.mp4";
+import forest from "../assets/bgImages/forest.mp4";
+import artist from "../assets/bgImages/artist.mp4";
+import bobaShop from "../assets/bgImages/boba-shop.mp4";
+import eveningDock from "../assets/bgImages/evening-dock.mp4";
+import houseRainyDay from "../assets/bgImages/house-rainy-day.mp4";
+import houseRainyNight from "../assets/bgImages/house-rainy-night.mp4";
+import jungle from "../assets/bgImages/jungle.mp4";
+import lofiGirl from "../assets/bgImages/lofi-girl.mp4";
+import nature from "../assets/bgImages/nature.mp4";
+import spring from "../assets/bgImages/spring.mp4";
+import treeHouse from "../assets/bgImages/tree-house.mp4";
 
 
 export const themes = [
-  // { id: 1, name: "Peach", color: "#ffcb9a", text: "#402c19", bg: cat, gif: catGif },
-  // { id: 2, name: "Slate", color: "#787a73", text: "whiteSmoke", bg: rain, gif: rainGif },
-  // { id: 3, name: "Amethyst", color: "#DBA9A9", text: "#1c1616", bg: fish, gif: fishGif },
-  // { id: 4, name: "Grape", color: "#83677b", text: "#1f181d", bg: vending, gif: vendingGif },
-  // { id: 5, name: "Convida", color: "#852941", text: "#f5537b", bg: cafe, gif: cafeGif },
-  // { id: 6, name: "Clouds", color: "#659dbd", text: "#18262e", bg: clouds, gif: cloudsGif },
-  // { id: 7, name: "Gecko", color: "#afd275", text: "#434f2e", bg: monke, gif: monkeGif },
-  // { id: 8, name: "Cherry", color: "#e98078", text: "whiteSmoke", bg: room, gif: roomGif },
-
-  // { id:5,name: "Hazlenut", color: "#9d8d8f" },
-  // { id:6,name: "Mint", color: "#d1e8e2" },
-
-  { id: 1, color: "#ffcb9a", text: "#402c19", bg: cat, gif: catGif },
-  { id: 2, color: "#787a73", text: "whiteSmoke", bg: rain, gif: rainGif },
-  { id: 3, color: "#DBA9A9", text: "#1c1616", bg: fish, gif: fishGif },
-  { id: 4, color: "#83677b", text: "#1f181d", bg: vending, gif: vendingGif },
-  { id: 5, color: "#852941", text: "#f5537b", bg: cafe, gif: cafeGif },
-  { id: 6, color: "#659dbd", text: "#18262e", bg: clouds, gif: cloudsGif },
-  { id: 7, color: "#afd275", text: "#434f2e", bg: monke, gif: monkeGif },
-  { id: 8, color: "#e98078", text: "whiteSmoke", bg: room, gif: roomGif },
+  { id: 1, color: "#ffcb9a", text: "#ffffff", gif: tokyoStreet },
+  { id: 2, color: "#ffcb9a", text: "#ffffff", gif: forest },
+  { id: 3, color: "#ffcb9a", text: "#ffffff", gif: artist },
+  { id: 4, color: "#ffcb9a", text: "#ffffff", gif: bobaShop },
+  { id: 5, color: "#ffcb9a", text: "#ffffff", gif: eveningDock },
+  { id: 6, color: "#ffcb9a", text: "#ffffff", gif: houseRainyDay },
+  { id: 7, color: "#ffcb9a", text: "#ffffff", gif: houseRainyNight },
+  { id: 8, color: "#ffcb9a", text: "#ffffff", gif: jungle },
+  { id: 9, color: "#ffcb9a", text: "#ffffff", gif: lofiGirl },
+  { id: 10, color: "#ffcb9a", text: "#ffffff", gif: nature },
+  { id: 11, color: "#ffcb9a", text: "#ffffff", gif: spring },
+  { id: 12, color: "#ffcb9a", text: "#ffffff", gif: treeHouse },
 ];

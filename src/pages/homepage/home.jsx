@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createContext } from "react";
 import "./home.css";
-import BgImage from "../../components/MediaPlayer/BgImage";
+// import BgImage from "../../components/MediaPlayer/BgImage";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Clock from "../../components/Clock/Clock";
 import Weather from "../../components/weatherCard/Weather";

@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import "./Themes.css";
 import { Icon } from "@iconify/react";
-import { newShade } from "../../utils/newShade";
+// import { newShade } from "../../utils/newShade";
 import { TextField, MenuItem } from "@mui/material";
 import { themes as allThemes } from "../../constants/themes";
 import { useDispatch, useSelector } from "react-redux";
 import { changeThemeById } from "../../redux/reducers/themeSlice";
 import { saveTheme } from "../../redux/reducers/userSlice";
 import ChangeCircleIcon from "@mui/icons-material/ChangeCircle";
-import { themes } from "../../constants/themes";
+// import { themes } from "../../constants/themes";
 
 export default function Themes() {
     const theme = useSelector((state) => state.theme.theme);
@@ -36,7 +36,7 @@ export default function Themes() {
     };
 
     useEffect(() => {
-        setIndex((index + 1) % themes.length);
+        setIndex((index + 1) % allThemes.length);
         // return () => {
         //   second
         // }
@@ -79,7 +79,7 @@ export default function Themes() {
                                 value={item.id}
                                 onClick={() => changeTheme(item.id)}
                                 style={{
-                                    backgroundColor: newShade(item.color, -10),
+                                    // backgroundColor: newShade(item.color, -10),
                                     width: "100%",
                                     height: "35px",
                                     color: item.text,

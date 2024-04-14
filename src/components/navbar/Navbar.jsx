@@ -44,7 +44,7 @@ const Navbar = () => {
                     welcome back, {user.username}
                 </span>
                 <span>
-                    {/* <Themes /> */}
+                    <Themes />
                     <IconButton
                         title="logout"
                         style={{ color: textColor }}
@@ -57,7 +57,7 @@ const Navbar = () => {
             <Dialog open={open} onClose={() => setOpen(false)}>
                 <div
                     className={styles.logoutConfirm}
-                    style={{ backgroundColor: newShade(theme, 10) }}
+                    // style={{ backgroundColor: newShade(theme, 10) }}
                 >
                     <h3 className={styles.confirmText}>
                         So long! {user.username}

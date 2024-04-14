@@ -18,7 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser, updateUser } from "./redux/reducers/userSlice";
 import Navbar from "./components/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
-import BgImage from "./components/MediaPlayer/BgImage";
+import BgImage from "./components/BgImage/BgImage";
 
 function App() {
     const reduxtheme = useSelector((state) => state.theme.theme);
