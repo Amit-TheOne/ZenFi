@@ -11,7 +11,7 @@ import { newShade } from "../../utils/newShade";
 import Todos from "../../components/todos/Todos";
 import { auth } from "../../firebase";
 import Chatbot from "../../components/chatbot/Chatbot";
-import { Quote } from "../../components/Quote";
+import Quote from "../../components/Quote";
 import SoundPlayers from "../../components/ambientSounds/ambientSounds";
 import { buttonClick } from "../../assets/functions/clickSound";
 import chatBot from "../../assets/images/chat.png";
@@ -19,7 +19,7 @@ import chatBot from "../../assets/images/chat.png";
 import animationData from "../../assets/animations/loadAnimation.json";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/reducers/userSlice";
-import Themes from "../../components/Themes/Themes";
+// import Themes from "../../components/Themes/Themes";
 import Timer from "../../components/Timer/Timer"
 
 const iconStyle = {

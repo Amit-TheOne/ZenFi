@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import LofiPlayer from "../lofiPlayer/LofiPlayer";
 import { newShade } from "../../utils/newShade";
 import { toastify } from "../../utils/toastify";
-import Themes from "../Themes/Themes";
+import ChangeBgButton from "../ChangeBg/ChangeBg";
 
 const Navbar = () => {
     const user = useSelector((state) => state.user.user);
@@ -33,20 +33,29 @@ const Navbar = () => {
     return (
         <div className={styles.navbar}>
             <h1 className={styles.logo}>
-                ZenFi <Icon className="yinyang" icon="openmoji:yin-yang" />{" "}
+                <span className="dancing-script-special"> ZenFi </span>
+                {/* <Icon className="yinyang" icon="openmoji:yin-yang" />{" "} */}
                 <small id="subhead" className={styles.subhead}>
-                    your virtual study environment
+                    virtual productivity space
                 </small>
             </h1>
-            <LofiPlayer />
+            {/* <LofiPlayer /> */}
             <div className={styles.logout}>
-                <span className={styles.welcome}>
-                    welcome back, {user.username}
-                </span>
                 <span>
-                    <Themes />
                     <IconButton
-                        title="logout"
+                        title="Change Background"
+                        // style={{ color: textColor }}
+                        className="themeBtn"
+                    >
+                        <ChangeBgButton />
+                    </IconButton>
+                </span>
+                {/* <span className={styles.welcome}>
+                    welcome back, {user.username}
+                </span> */}
+                <span>
+                    <IconButton
+                        title={`Logout ${user.username}`}
                         style={{ color: textColor }}
                         onClick={() => setOpen(true)}
                     >
@@ -60,17 +69,17 @@ const Navbar = () => {
                     // style={{ backgroundColor: newShade(theme, 10) }}
                 >
                     <h3 className={styles.confirmText}>
-                        So long! {user.username}
+                        Want to go? {user.username}
                     </h3>
                     <div className={styles.btnContainer}>
                         <button
                             className={styles.stayBtn}
                             onClick={() => setOpen(false)}
                         >
-                            Stay
+                            NO
                         </button>
                         <button className={styles.leaveBtn} onClick={logout}>
-                            Leave
+                            YES
                         </button>
                     </div>
                 </div>

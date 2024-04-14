@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Themes.css";
+import "./ChangeBg.css";
 import { Icon } from "@iconify/react";
 // import { newShade } from "../../utils/newShade";
 import { TextField, MenuItem } from "@mui/material";
@@ -64,7 +64,7 @@ export default function Themes() {
           }}
         > */}
                 <ChangeCircleIcon
-                    style={{ color: "darkgrey", cursor: "pointer" }}
+                    style={{ color: "whitesmoke", cursor: "pointer" }}
                     defaultValue={theme.id}
                     onClick={() => changeTheme()}
                 >
@@ -72,7 +72,7 @@ export default function Themes() {
           icon="mdi:circle-arrows" 
           style={{height: "30px", width: "30px"}}
         > */}
-                    {allThemes.map((item) => {
+                    {/* {allThemes.map((item) => {
                         return (
                             <MenuItem
                                 key={item.id}
@@ -107,7 +107,7 @@ export default function Themes() {
                                 </div>
                             </MenuItem>
                         );
-                    })}
+                    })} */}
                     {/* </Icon> */}
                 </ChangeCircleIcon>
                 {/* </TextField> */}

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./BgImage.css";
 
 import { useSelector } from "react-redux";
-import Themes from "../Themes/Themes";
+// import Themes from "../Themes/Themes";
 
 export default function MediaPlayer() {
   const reduxtheme = useSelector((state) => state.theme.theme);
