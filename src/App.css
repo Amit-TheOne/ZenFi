@@ -1,6 +1,15 @@
-.app{
+html {
   margin: 0;
-  padding: 0px 0px;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: none;
+}
+
+.app{
   box-sizing: border-box;
   cursor: url('./cursor.svg'),auto;
   /* background-image: linear-gradient(135deg,rgba(209, 34, 34, 0),rgba(181, 29, 29, 0.8)); */
@@ -11,9 +20,9 @@
 }
 
 .image {
-  min-height: 100vh;
+  /* min-height: 100vh;
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }

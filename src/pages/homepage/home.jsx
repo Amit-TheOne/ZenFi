@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createContext } from "react";
 import "./home.css";
-import MediaPlayer from "../../components/MediaPlayer/MediaPlayer";
+import BgImage from "../../components/MediaPlayer/BgImage";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Clock from "../../components/Clock/Clock";
 import Weather from "../../components/weatherCard/Weather";
@@ -74,23 +74,18 @@ export default function Home() {
   return (
     <>
       {isLoading ? (
-        <Lottie
-          options={defaultOptions}
-          height={400}
-          width={400}
-          isStopped={isLoading}
-        />
+        "Hello"
       ) : (
         <div className="home">
 
           <div className="body">
             <div className="side-column">
               <Clock />
-              <Weather />
+              {/* <Weather /> */}
               <Todos />
             </div>
             <div className="center-column">
-              <MediaPlayer />
+              {/* <BgImage /> */}
             </div>
             <div className="side-column">
               {/* <Timer /> */}

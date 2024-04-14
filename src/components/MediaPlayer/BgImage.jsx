@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./MediaPlayer.css";
+import "./BgImage.css";
 
 import { useSelector } from "react-redux";
 import Themes from "../Themes/Themes";
@@ -11,26 +11,27 @@ export default function MediaPlayer() {
     const img = document.getElementById("gif");
     img.style.visibility = "visible";
   };
-  // useEffect(() => {
-  //   const img = document.getElementById("gif");
-  //   if (img.complete) {
-  //     showImage();
-  //   } else {
-  //     img.style.visibility = "hidden";
-  //   }
-  // }, [reduxtheme.gif]);
+  useEffect(() => {
+    const img = document.getElementById("gif");
+    if (img.complete) {
+      showImage();
+    } else {
+      img.style.visibility = "hidden";
+    }
+  }, [reduxtheme.gif]);
 
   return (
-    <div className="music">
-      {/* <div
+    <div className="bg-image">
+      <div
         className="gif-blur"
-        style={{ backgroundImage: `url(${reduxtheme.bg})` }}
+        // style={{ backgroundImage: `url(${reduxtheme.bg})` }}
       >
         <img id="gif" alt="gif" src={reduxtheme.gif} onLoad={showImage}/>
-      </div> */}
-      <div style={{marginTop:"10px"}}>
-        <Themes/>
+        <div className="blur"/>
       </div>
+      {/* <div style={{marginTop:"10px"}}>
+        <Themes/>
+      </div> */}
     </div>
   );
 }

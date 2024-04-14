@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser, updateUser } from "./redux/reducers/userSlice";
 import Navbar from "./components/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
+import BgImage from "./components/MediaPlayer/BgImage";
 
 function App() {
     const reduxtheme = useSelector((state) => state.theme.theme);
@@ -45,13 +46,14 @@ function App() {
         <div className="app">
             <div className="image"
                 style={{
-                    backgroundColor: `${theme}`,
+                    // backgroundColor: `${theme}`,
                     color: `${textColor}`,
-                    backgroundImage: `url(${reduxtheme.gif})`,
+                    // backgroundImage: `url(${reduxtheme.gif})`,
                 }}
             >
+                <BgImage />
                 <Router>
-                    {/* {user && <Navbar/>} */}
+                    {user && <Navbar/>}
                     <Routes>
                         <Route
                             exact
