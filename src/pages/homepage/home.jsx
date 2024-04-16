@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { newShade } from "../../utils/newShade";
 import Todos from "../../components/todos/Todos";
 import { auth } from "../../firebase";
-import Chatbot from "../../components/chatbot/Chatbot";
+import ZenAI from "../../components/zenAI/ZenAI";
 import Quote from "../../components/Quote";
 import SoundPlayers from "../../components/ambientSounds/ambientSounds";
 import { buttonClick } from "../../assets/functions/clickSound";
@@ -110,7 +110,7 @@ export default function Home() {
                   id="bot-dialog"
                   // style={{ backgroundColor: newShade(theme, 5) }}
                 >
-                  <Chatbot close={onClose} chat={chat} setChat={setChat} />
+                  <ZenAI close={onClose} chat={chat} setChat={setChat} />
                 </div>
               </Dialog>
 

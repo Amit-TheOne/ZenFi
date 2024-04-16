@@ -3,7 +3,7 @@ import { newShade } from "../../utils/newShade";
 import { IconButton } from "@mui/material";
 import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
-import styles from "./chatbot.module.css";
+import styles from "./zenAI.module.css";
 import { useSelector } from "react-redux";
 // import { send } from "vite";
 
