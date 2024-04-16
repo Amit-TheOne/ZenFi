@@ -57,15 +57,26 @@ export default function Home() {
   // End Load Animation
 
   const [chatDialogOpen, setChatDialogOpen] = useState(false);
+  const [todoDialogOpen, setTodotDialogOpen] = useState(false);
 
-  const onClose = () => {
+  const onChatClose = () => {
     buttonClick.play();
     setChatDialogOpen(false);
   };
 
-  const onOpen = () => {
+  const onChatOpen = () => {
     buttonClick.play();
     setChatDialogOpen(true);
+  };
+
+  const onTodoClose = () => {
+    buttonClick.play();
+    setTodotDialogOpen(false);
+  };
+
+  const onTodoOpen = () => {
+    buttonClick.play();
+    setTodotDialogOpen(true);
   };
 
   const [chat, setChat] = useState([
@@ -99,7 +110,7 @@ export default function Home() {
                 className="zenfi-bot"
                 title="ZenAI"
                 // style={{ backgroundColor: newShade(theme, 5) }}
-                onClick={onOpen}
+                onClick={onChatOpen}
               >
                 {/* <img src={chatBot} style={iconStyle} />  */}
                 {/* {" "} ZenAI */}
@@ -110,7 +121,25 @@ export default function Home() {
                   id="bot-dialog"
                   // style={{ backgroundColor: newShade(theme, 5) }}
                 >
-                  <ZenAI close={onClose} chat={chat} setChat={setChat} />
+                  <ZenAI close={onChatClose} chat={chat} setChat={setChat} />
+                </div>
+              </Dialog>
+
+              <div
+                className="todos-button"
+                title="ToDos"
+                // style={{ backgroundColor: newShade(theme, 5) }}
+                onClick={onTodoOpen}
+              >
+                <Icon icon="mdi:format-list-checkbox" fontSize={25}/>
+              </div>
+              
+              <Dialog open={todoDialogOpen} maxWidth="sm">
+                <div
+                  id="todo-dialog"
+                  // style={{ backgroundColor: newShade(theme, 5) }}
+                >
+                  <Todos close={onTodoClose}/>
                 </div>
               </Dialog>
 

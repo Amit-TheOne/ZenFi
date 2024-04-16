@@ -52,24 +52,7 @@
     /* flex: 0.5; */
 }
 
-#todoInput {
-    border: none;
-    border-bottom: 2px solid black;
-    margin-bottom: 2px;
-    font-family: "VT323", monospace;
-    font-size: 20px;
-    background-color: transparent;
-    border-radius: 2px;
-    margin-top: 10px;
-    width: 85%;
-    height: 30px;
-}
-#todoInput:focus {
-    outline: none;
-}
-#todoInput::placeholder {
-    color: black;
-}
+
 
 .zenfi-bot {
     font-size: 20px;
@@ -107,6 +90,43 @@
     background-color: rgba(52, 24, 24, 0.737);
 }
 
+.todos-button {
+    font-size: 0px;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translate(0%, -25%);
+    margin-right: 25px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex: 0.5; */
+    /* margin-bottom: 20px; */
+    /* box-shadow: 2px 2px 2px rgb(52, 51, 51); */
+    /* width: 180px; */
+    padding: 5px 5px;
+    border-radius: 5px;
+    /* margin-top: 10px; */
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    /* height: 40px; */
+    background-color: rgba(215, 225, 230, 0.607);
+    /* background-color: transparent; */
+}
+
+.todos-button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+#todo-dialog {
+    height: 460px;
+    width: 460px;
+    background-color: rgba(179, 154, 154, 0.737);
+}
+
 #startGame:hover {
     cursor: pointer;
 }
@@ -128,13 +148,14 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-#addTodo {
+/* #addTodo {
     border: none;
     background-color: transparent;
-}
-#addTodo:hover {
+} */
+
+/* #addTodo:hover {
     cursor: pointer;
-}
+} */
 
 .body {
     display: flex;

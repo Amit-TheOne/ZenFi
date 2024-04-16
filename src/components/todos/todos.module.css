@@ -1,75 +1,160 @@
-.todo_container{
-    margin-left: 5px;
-    width: 300px;
+.modalStyle {
+    /* margin-bottom: 10px; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    overflow: hidden;
+    /* border: 1px solid red; */
+    /* height: 98%; */
 }
 
-.todo_container>h2{
-    margin-top: 35px;
-    font-weight: 500;
+.modalStyle > h2 {
     margin-bottom: 5px;
+    padding-left: 25px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.todo_list{
-    max-height:180px;
-    overflow-y:scroll;
-    overflow-x:hidden;
+.todo_container {
+    /* margin-left: 5px; */
+    /* margin-right: 5px; */
+    /* margin-bottom: 5px; */
+    /* height: 100%; */
+    width: fit-content;
+    /* padding-bottom: 5px; */
+    /* margin-bottom: 30px; */
+    /* padding-top: 10px; */
+    padding-left: 12px;
+    padding-right: 12px;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* overflow-y: hidden; */
+    /* border: 1px solid red; */
+    justify-content: "space-between";
+
+    /* border-radius: 10px; */
+    height: 100%;
+    width: 95%;
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    overflow: hidden;
+    /* margin-bottom: 10px; */
+    /* padding: 5px; */
+    /* padding-top: 10px; */
+    /* border: 1px solid rgb(208, 197, 197); */
+    /* background-color: rgba(57, 62, 67, 0.927); */
+    /* background-color: rgb(214, 198, 146); */
+    /* color: whitesmoke; */
 }
-.todo_list::-webkit-scrollbar{
-    width: 5px;
-}
-.todo_list::-webkit-scrollbar-track{
+
+#todoInput {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 18px;
     background-color: transparent;
-    width: 5px;
+    /* border-radius: 2px; */
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-left: 10px;
+    width: 80%;
+    height: 30px;
 }
-.todo_list::-webkit-scrollbar-thumb{
-    background-color: #545151;
-    width: 5px;
+
+#todoInput:focus {
+    outline: none;
+}
+#todoInput::placeholder {
+    color: rgb(96, 79, 79);
+}
+
+.todo_list {
+    max-height: 295px;
+    /* padding-bottom: -20px; */
+    /* position: absolute; */
+    max-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* border: 1px solid black ; */
+}
+
+.todo_list::-webkit-scrollbar {
+    width: 7px;
+}
+
+.todo_list::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 7px;
+}
+
+.todo_list::-webkit-scrollbar-thumb {
+    background-color: #614848;
+    width: 7px;
     border-radius: 10px;
 }
 
-.listItem
-{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+.listItem {
+    /* display: flex;
+    flex-direction: row; */
+    /* position: absolute; */
+    justify-self: center;
+    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    width: 100%;
-    margin-left: 5px;
-    padding: 0;
-    padding-left: 5px;
+    width: 200px;
+    height: 50px;
+    /* margin-left: 5px; */
+    /* padding: 0; */
+    /* padding-left: 5px; */
     padding-right: 5px;
+    padding-top: 0px;
+    border: none;
+    border-bottom: 1px solid rgb(210, 225, 210);
 }
 
-.task{
-    flex: 0.9;
+.task {
+    flex: 0.6;
+    /* word-wrap: ; */
     font-weight: 500;
-    font-size: 17px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.task_buttons {
+    flex: 0.4;
+    /* display: flex;
+    flex-direction: row; */
+    justify-content: space-between;
+    /* align-items: center; */
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+}
 
-@media screen and (max-width:1280px){
-    .todo_container{
+@media screen and (max-width: 1280px) {
+    .todo_container {
         width: 280px;
     }
 }
 
-@media screen and (max-width:1140px){
-    .todo_container{
+@media screen and (max-width: 1140px) {
+    .todo_container {
         width: 250px;
     }
 }
 
-@media screen and (max-width:840px){
-    .todo_container>h2{
+@media screen and (max-width: 840px) {
+    .todo_container > h2 {
         margin-top: 20px;
     }
-    .task{
+    .task {
         font-size: 15px;
     }
 }
 
-@media screen and (max-width:640px){
-    .todo_container>h2{
+@media screen and (max-width: 640px) {
+    .todo_container > h2 {
         margin-top: 20px;
     }
 }
