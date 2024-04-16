@@ -21,12 +21,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/reducers/userSlice";
 // import Themes from "../../components/Themes/Themes";
 import Timer from "../../components/Timer/Timer"
+import LofiPlayer from "../../components/lofiPlayer/LofiPlayer"
 
 const iconStyle = {
-  height: "30px",
-  width: "30px",
+  height: "25px",
+  width: "25px",
   textAlign: "center",
   verticalAlign: "middle",
+  filter: "invert(1)",
 };
 
 
@@ -55,6 +57,7 @@ export default function Home() {
   // End Load Animation
 
   const [chatDialogOpen, setChatDialogOpen] = useState(false);
+
   const onClose = () => {
     buttonClick.play();
     setChatDialogOpen(false);
@@ -64,10 +67,11 @@ export default function Home() {
     buttonClick.play();
     setChatDialogOpen(true);
   };
+
   const [chat, setChat] = useState([
     {
-      message: "Hello, I am ZenFiBot. How can I help you?",
-      sender: "bot",
+      message: "Hey, I am ZenAI. How can I help you?",
+      sender: "ZenAI",
     },
   ]);
 
@@ -79,29 +83,32 @@ export default function Home() {
         <div className="home">
 
           <div className="body">
-            <div className="side-column">
+            <div className="side-column clockCom">
               <Clock />
               {/* <Weather /> */}
-              <Todos />
+              {/* <Todos /> */}
             </div>
             <div className="center-column">
-              {/* <BgImage /> */}
+              <LofiPlayer />
             </div>
             <div className="side-column">
               {/* <Timer /> */}
-              <Timer />
+              {/* <Timer /> */}
 
-              {/* <div
-                className="gamesButton"
-                style={{ backgroundColor: newShade(theme, 5) }}
+              <div
+                className="zenfi-bot"
+                title="ZenAI"
+                // style={{ backgroundColor: newShade(theme, 5) }}
                 onClick={onOpen}
               >
-                <img src={chatBot} style={iconStyle} /> ZenFiBot
-              </div> */}
+                {/* <img src={chatBot} style={iconStyle} />  */}
+                {/* {" "} ZenAI */}
+                🤖
+              </div>
               <Dialog open={chatDialogOpen} maxWidth="sm">
                 <div
-                  id="chat_dialog"
-                  style={{ backgroundColor: newShade(theme, 5) }}
+                  id="bot-dialog"
+                  // style={{ backgroundColor: newShade(theme, 5) }}
                 >
                   <Chatbot close={onClose} chat={chat} setChat={setChat} />
                 </div>
@@ -118,8 +125,9 @@ export default function Home() {
               >
                 💡Trivia
               </div> */}
-              <SoundPlayers />
+              {/* <SoundPlayers /> */}
               {/* <Quote /> */}
+              {/* <LofiPlayer /> */}
             </div>
           </div>
         </div>

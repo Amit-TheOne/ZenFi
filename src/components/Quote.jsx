@@ -64,11 +64,10 @@ const Quote = () => {
             {quote ? (
                 <div
                     id="quote"
-                    style={{ fontSize: "22px" }}
                     className="dancing-script-special"
                 >
                     &ldquo; {quote.q} &rdquo;
-                    <em> {quote.a} </em>
+                    <em> - {quote.a} </em>
                 </div>
             ) : (
                 <></>
