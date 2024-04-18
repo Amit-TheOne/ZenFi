@@ -22,6 +22,7 @@ import { updateUser } from "../../redux/reducers/userSlice";
 // import Themes from "../../components/Themes/Themes";
 import Timer from "../../components/Timer/Timer"
 import LofiPlayer from "../../components/lofiPlayer/LofiPlayer"
+import PomodoroTimer from "../../components/pomodoro/PomodoroTimer";
 
 const iconStyle = {
   height: "25px",
@@ -41,23 +42,24 @@ export default function Home() {
   const theme = reduxtheme.color;
   // Load Animation
   const [isLoading, setIsLoading] = useState(false);
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
+  // }, []);
   // End Load Animation
 
   const [chatDialogOpen, setChatDialogOpen] = useState(false);
   const [todoDialogOpen, setTodotDialogOpen] = useState(false);
+  const [pomoDialogOpen, setPomoDialogOpen] = useState(false);
 
   const onChatClose = () => {
     buttonClick.play();
@@ -77,6 +79,16 @@ export default function Home() {
   const onTodoOpen = () => {
     buttonClick.play();
     setTodotDialogOpen(true);
+  };
+
+  const onPomoClose = () => {
+    buttonClick.play();
+    setPomoDialogOpen(false);
+  };
+
+  const onPomoOpen = () => {
+    buttonClick.play();
+    setPomoDialogOpen(true);
   };
 
   const [chat, setChat] = useState([
@@ -140,6 +152,24 @@ export default function Home() {
                   // style={{ backgroundColor: newShade(theme, 5) }}
                 >
                   <Todos close={onTodoClose}/>
+                </div>
+              </Dialog>
+
+              <div
+                className="pomodoro-button"
+                title="Pomodoro Timer"
+                // style={{ backgroundColor: newShade(theme, 5) }}
+                onClick={onPomoOpen}
+              >
+                <Icon icon="gis:timer" fontSize={25}/>
+              </div>
+
+              <Dialog open={pomoDialogOpen} maxWidth="sm">
+                <div
+                  id="pomodoro-dialog"
+                  // style={{ backgroundColor: newShade(theme, 5) }}
+                >
+                  <PomodoroTimer close={onPomoClose}/>
                 </div>
               </Dialog>
 
