@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography, IconButton, TextField, Button } from "@mui/material";
 import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
-import { newShade } from "../../utils/newShade";
+// import { newShade } from "../../utils/newShade";
 import { toastify } from "../../utils/toastify";
 import styles from "./LofiPlayer.module.css";
 
@@ -14,6 +14,8 @@ const Playlist = ({ theme, playlist, setPlaylist, setCurrentPlaylist }) => {
     reset,
   } = useForm();
 
+  const [link, setLink] = useState("");
+
   const removeSong = (song) => {
     if (playlist.length === 1) {
       toastify(null, "You can't remove the last song from the playlist");
@@ -21,7 +23,7 @@ const Playlist = ({ theme, playlist, setPlaylist, setCurrentPlaylist }) => {
       setPlaylist(playlist.filter((item) => item.title !== song.title));
     }
   };
-  const [link, setLink] = useState("");
+
   const handleLinkChange = (e, val) => {
     setLink(val);
   };
@@ -39,12 +41,14 @@ const Playlist = ({ theme, playlist, setPlaylist, setCurrentPlaylist }) => {
       );
       const data = await response.json();
       const title = data.title;
+      
       const song = {
         url: url,
         title: title,
         img: data.thumbnail_url,
         author: data?.author_name,
       };
+
       setPlaylist([...playlist, song]);
       toastify("success", "Playlist updated!");
     } catch (error) {
@@ -56,17 +60,18 @@ const Playlist = ({ theme, playlist, setPlaylist, setCurrentPlaylist }) => {
 
   const changeSong=(e,song)=>{
        setCurrentPlaylist(song);
-       e.stopPropagation();     
+       e.stopPropagation();
   }
 
   return (
-    <Box sx={{ backgroundColor: theme.color }} className={styles.playlist}>
+    <Box sx={{ backgroundColor: "rgba(179, 154, 154, 0.737)" }} className={styles.playlist}>
       <Typography
-        variant="h6"
-        style={{ textAlign: "center", marginBottom: "10px", color: theme.text }}
+        variant="h5"
+        style={{ textAlign: "center", marginBottom: "10px", color: "black" }}
       >
         Playlist 🎵
       </Typography>
+      
       <form onSubmit={handleSubmit(addToPlaylist)}>
         <input
           className={styles.input_song}
@@ -88,26 +93,29 @@ const Playlist = ({ theme, playlist, setPlaylist, setCurrentPlaylist }) => {
               onClick= {(e)=>changeSong(e,song)}
               key={index}
               className={styles.songContainer}
-              style={{ backgroundColor: newShade(theme.color, -50) }}
+              style={{ backgroundColor: "rgba(179, 154, 154, 0.737)" }}
             >
               <img src={song.img} alt="thumbnail" className={styles.songImg} />
+              
               <Typography
                 variant="body1"
                 onClick={() => setCurrentPlaylist(song)}
                 className={styles.songTitle}
-                sx={{ color: theme.text }}
+                sx={{ color: "lightcyan" }}
               >
                 {song.title.slice(0, 50)}
                 {song.title.length > 50 ? "..." : ""}
               </Typography>
-              <em style={{color: theme.text }}>~ {song.author.slice(0,20)}</em>
+
+              <em style={{color: "lightcyan" }}> ~ {song.author.slice(0,20)} </em>
+              
               <IconButton
                 onClick={() => removeSong(song)}
                 className={styles.songAdd}
               >
                 <Icon
                   icon="fluent:delete-24-filled"
-                  style={{ fontSize: "20px", color: theme.text }}
+                  style={{ fontSize: "20px", color: "black" }}
                 />
               </IconButton>
             </Box>

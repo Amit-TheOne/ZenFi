@@ -43,6 +43,9 @@
   border-bottom: 1px solid black;
 }
 
+.input_song:focus {
+  outline: none;
+}
 .input_song::placeholder{
   color: black;
 }

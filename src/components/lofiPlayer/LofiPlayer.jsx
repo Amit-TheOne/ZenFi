@@ -14,13 +14,15 @@ const LofiPlayer = () => {
   const [play, setPlay] = useState(false);
   const [musicVolume, setMusicVolume] = useState(0.2);
   const [playlist, setPlaylist] = useState(playlistSongs);
-
   const [currentPlayist, setCurrentPlaylist] = useState(playlist[0]);
+  const [openDialog, setOpenDialog] = useState(false);
+
 
   const togglePlay = () => {
     buttonClick.play();
     setPlay(!play);
   };
+
   const nextTrack = () => {
     const currentSong = playlist.indexOf(currentPlayist);
     if (currentSong === playlist.length - 1) {
@@ -33,28 +35,31 @@ const LofiPlayer = () => {
   const handleVolumeChange = (newValue) => {
     setMusicVolume(newValue);
   };
-
-  const [openDialog, setOpenDialog] = useState(false);
+  
   return (
     <div className={styles.music_player}>
       <p className={styles.title}>{currentPlayist.title} 🎵</p>
-      <p className={styles.musicLogo}>🎵</p>
+      {/* <p className={styles.musicLogo}>🎵</p> */}
+
       <Box className={styles.btnContainer}>
         {!play ? (
           <IconButton onClick={togglePlay}>
-            <Icon icon="akar-icons:play" style={{ fontSize: "25px", color: theme.text  }} />
+            <Icon icon="akar-icons:play" style={{ fontSize: "30px", color: "white" }} />
           </IconButton>
         ) : (
           <IconButton onClick={togglePlay}>
-            <Icon icon="akar-icons:pause" style={{ fontSize: "25px", color: theme.text }} />
+            <Icon icon="akar-icons:pause" style={{ fontSize: "30px", color: "white" }} />
           </IconButton>
         )}
+        
         <IconButton onClick={nextTrack} className={styles.playlistBtn}>
-          <Icon icon="fluent:next-32-regular" style={{ fontSize: "25px",color: theme.text }} />
+          <Icon icon="fluent:next-32-regular" style={{ fontSize: "25px", color: "white" }} />
         </IconButton>
+
         <IconButton onClick={() => setOpenDialog(true)} id="playlist-toggle">
-          <Icon icon="ph:list-bold" style={{ fontSize: "25px",color: theme.text }} />
+          <Icon icon="ph:list-bold" style={{ fontSize: "25px", color: "white" }} />
         </IconButton>
+
         <Box className={styles.slider}>
           <VolumeSlider
             value={musicVolume}
@@ -62,7 +67,7 @@ const LofiPlayer = () => {
             max={1}
             step={0.1}
             onChange={handleVolumeChange}
-            isVertical={false}
+            // isVertical={false}
           />
         </Box>
 
@@ -74,6 +79,7 @@ const LofiPlayer = () => {
           height="0px"
         />
       </Box>
+      
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
         <Playlist
           theme={theme}
